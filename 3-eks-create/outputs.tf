@@ -17,3 +17,8 @@ output "oidc_issuer" {
 output "oidc_provider_arn" {
   value = aws_iam_openid_connect_provider.eks_oidc.arn
 }
+
+output "cluster_auth" {
+  value = data.aws_eks_cluster_auth.cluster_auth
+  sensitive = true
+}
